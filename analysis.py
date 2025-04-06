@@ -285,10 +285,14 @@ def start_analysis(region, industry, quarter, low_budget, high_budget, talent):
 
   return results
 
-# res = start_analysis('midwest', 'legal', 'q3', 5, 90, True)
-# for r in res:
-#   print(r)
-#   print('---')
+# regions = midwest, northeast, south, west
+# industries = tami, fsi, legal
+# quarters = q1, q2, q3, q4
+# bottom_range, top_range, talentNeeded
+res = start_analysis('midwest', 'legal', 'q3', 5, 90, True)
+for r in res:
+  print(r)
+  print('---')
 
 print("Madame Saville loves datafest!")
 
