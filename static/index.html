@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madame Salville</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Madame Salville</h1>
+
+    <form id="rental-form">
+        <div class="form-group">
+            <label for="rental-quarter">In what 2025 quarter are you looking to rent?</label>
+            <select id="rental-quarter" name="rental-quarter">
+                <option value="" disabled selected>Please select an option</option>
+                <option value="q1">Q1 (January-March)</option>
+                <option value="q2">Q2 (April-June)</option>
+                <option value="q3">Q3 (July-September)</option>
+                <option value="q4">Q4 (October-December)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rental-region">Broadly, where do you want to rent?</label>
+            <select id="rental-region" name="rental-region">
+                <option value="" disabled selected>Please select an option</option>
+                <option value="midwest">Midwest and Central</option>
+                <option value="northeast">Northeast</option>
+                <option value="south">South</option>
+                <option value="west">West</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="industry-type">What industry?</label>
+            <select id="industry-type" name="industry-type">
+                <option value="" disabled selected>Please select an option</option>
+                <option value="tami">Technology, Advertising, Media, and Information</option>
+                <option value="fsi">Financial Services and Insurance</option>
+                <option value="legal">Legal Services</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Price Range ($/sq ft/year)</label>
+            <div class="price-inputs">
+                <div>
+                    <label for="price-min">Minimum:</label>
+                    <input type="number" id="price-min" name="price-min" min="0" step="0.01" placeholder="Min price">
+                </div>
+                <div>
+                    <label for="price-max">Maximum:</label>
+                    <input type="number" id="price-max" name="price-max" min="0" step="0.01" placeholder="Max price">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="talent-needed" name="talent-needed">
+            <label for="talent-needed">We are looking to hire talent</label>
+        </div>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="result-container" class="result">
+        <p id="result-text"></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
